@@ -1,0 +1,709 @@
+
+
+
+pcall(game.HttpGet, game, setmetatable({}, {
+    __tostring = function()
+        print("Kick Player")
+        return ""
+    end,
+}))
+
+local function CheckForSpy()
+    local core = game:GetService("CoreGui")
+    local keyword = "spy"
+    
+    for _, v in pairs(core:GetDescendants()) do
+        if v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then
+            if string.find(string.lower(v.Name), string.lower(keyword)) or string.find(string.lower(v.Text), string.lower(keyword)) then
+                       while true do end
+                end
+            end
+        end
+end
+
+
+
+CheckForSpy()
+
+game:GetService("CoreGui").ChildAdded:Connect(function()
+CheckForSpy()
+end)
+if isfolder("AnimeWrestlingSimulator") then print("lalala") else makefolder("AnimeWrestlingSimulator") end
+if not isfile("TuffKey.txt") then writefile("TuffKey.txt","") end
+local LibVersion = "v2" -- ( v3 & v4 )
+local LibType = "roblox" -- Available ( FiveM or Roblox ) always use small letter
+local ServiceID = "thatstuff" -- Replace this with your Service ID
+
+local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/servicelib?service='..ServiceID..'&core='..LibType..'&param='..LibVersion))()
+
+function createGui(parent)
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Topbar = Instance.new("ImageLabel")
+local Desc = Instance.new("TextLabel")
+local Icon = Instance.new("ImageLabel")
+local Icon_2 = Instance.new("ImageLabel")
+local Background = Instance.new("ImageLabel")
+local GetKey = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local BG = Instance.new("ImageLabel")
+local KeyBox = Instance.new("TextBox")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local UICorner_3 = Instance.new("UICorner")
+local Description = Instance.new("TextLabel")
+local ConfirmKey = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local BG_2 = Instance.new("ImageLabel")
+local Description_2 = Instance.new("TextLabel")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(1, 1, 1)
+Frame.BackgroundTransparency = 2
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.285294116, 0, 0.306172848, 0)
+Frame.Size = UDim2.new(0.428676456, 0, 0.387654334, 0)
+
+UICorner.Parent = Frame
+
+Topbar.Name = "Topbar"
+Topbar.Parent = Frame
+Topbar.BackgroundColor3 = Color3.new(1, 1, 1)
+Topbar.BackgroundTransparency = 2
+Topbar.BorderColor3 = Color3.new(0, 0, 0)
+Topbar.BorderSizePixel = 0
+Topbar.Position = UDim2.new(0.151447847, 0, -0.252137989, 0)
+Topbar.Size = UDim2.new(0.693768799, 0, 0.323117584, 0)
+Topbar.ZIndex = 999999998
+Topbar.Image = "rbxassetid://14300623828"
+
+Desc.Name = "Desc"
+Desc.Parent = Topbar
+Desc.BackgroundColor3 = Color3.new(1, 1, 1)
+Desc.BackgroundTransparency = 2
+Desc.BorderColor3 = Color3.new(0, 0, 0)
+Desc.BorderSizePixel = 0
+Desc.Position = UDim2.new(0.206181318, 0, 0.208654195, 0)
+Desc.Size = UDim2.new(0.606392264, 0, 0.749797344, 0)
+Desc.ZIndex = 999999999
+Desc.Font = Enum.Font.Unknown
+Desc.Text = "TUFF"
+Desc.TextColor3 = Color3.new(1, 1, 1)
+Desc.TextScaled = true
+Desc.TextSize = 14
+Desc.TextWrapped = true
+
+Icon.Name = "Icon"
+Icon.Parent = Desc
+Icon.BackgroundColor3 = Color3.new(1, 1, 1)
+Icon.BackgroundTransparency = 1
+Icon.BorderSizePixel = 0
+Icon.Position = UDim2.new(-0.267084718, 0, -0.10464263, 0)
+Icon.Size = UDim2.new(0.330346227, 0, 0.975031018, 0)
+Icon.ZIndex = 999999999
+Icon.Image = "rbxassetid://14300503936"
+Icon.ScaleType = Enum.ScaleType.Fit
+
+Icon_2.Name = "Icon"
+Icon_2.Parent = Desc
+Icon_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Icon_2.BackgroundTransparency = 1
+Icon_2.BorderSizePixel = 0
+Icon_2.Position = UDim2.new(0.968197465, 0, -0.032003466, 0)
+Icon_2.Size = UDim2.new(0.281514466, 0, 0.832901657, 0)
+Icon_2.ZIndex = 999999999
+Icon_2.Image = "rbxassetid://14300503936"
+Icon_2.ScaleType = Enum.ScaleType.Fit
+
+Background.Name = "Background"
+Background.Parent = Frame
+Background.BackgroundColor3 = Color3.new(1, 1, 1)
+Background.BackgroundTransparency = 2
+Background.BorderColor3 = Color3.new(0, 0, 0)
+Background.BorderSizePixel = 0
+Background.Position = UDim2.new(0.0125112645, 0, -0.071603179, 0)
+Background.Size = UDim2.new(0.971642017, 0, 1.14266098, 0)
+Background.ZIndex = 999999997
+Background.Image = "rbxassetid://14300536292"
+
+GetKey.Name = "GetKey"
+GetKey.Parent = Frame
+GetKey.BackgroundColor3 = Color3.new(0.384314, 1, 0.796079)
+GetKey.BorderColor3 = Color3.new(0, 0, 0)
+GetKey.BorderSizePixel = 0
+GetKey.Position = UDim2.new(0.104631215, 0, 0.686816573, 0)
+GetKey.Size = UDim2.new(0.343053162, 0, 0.134839565, 0)
+GetKey.ZIndex = 999999999
+GetKey.Font = Enum.Font.FredokaOne
+GetKey.Text = ""
+GetKey.TextColor3 = Color3.new(1, 1, 1)
+GetKey.TextScaled = true
+GetKey.TextSize = 14
+GetKey.TextWrapped = true
+
+UICorner_2.Parent = GetKey
+
+TextLabel.Parent = GetKey
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 2
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.0399999991, 0, 5.98383906e-07, 0)
+TextLabel.Size = UDim2.new(1.03999996, 0, 1.00000036, 0)
+TextLabel.ZIndex = 999999998
+TextLabel.Font = Enum.Font.FredokaOne
+TextLabel.Text = "Get Key"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+UITextSizeConstraint.Parent = TextLabel
+UITextSizeConstraint.MaxTextSize = 33
+
+BG.Name = "BG"
+BG.Parent = GetKey
+BG.BackgroundColor3 = Color3.new(1, 1, 1)
+BG.BackgroundTransparency = 2
+BG.BorderColor3 = Color3.new(0, 0, 0)
+BG.BorderSizePixel = 0
+BG.Position = UDim2.new(-0.0985520929, 0, -0.173706055, 0)
+BG.Size = UDim2.new(1.13376868, 0, 1.40154874, 0)
+BG.ZIndex = 999999997
+BG.Image = "rbxassetid://14300623828"
+BG.ImageColor3 = Color3.new(0.945098, 0.345098, 1)
+
+KeyBox.Name = "KeyBox"
+KeyBox.Parent = Frame
+KeyBox.BackgroundColor3 = Color3.new(1, 1, 1)
+KeyBox.BorderColor3 = Color3.new(0, 0, 0)
+KeyBox.BorderSizePixel = 0
+KeyBox.Position = UDim2.new(0.104631215, 0, 0.41401273, 0)
+KeyBox.Size = UDim2.new(0.7975986, 0, 0.219745219, 0)
+KeyBox.ZIndex = 999999999
+KeyBox.Font = Enum.Font.FredokaOne
+KeyBox.PlaceholderText = "Insert Key Here..."
+KeyBox.Text = ""
+KeyBox.TextColor3 = Color3.new(0, 0, 0)
+KeyBox.TextScaled = true
+KeyBox.TextSize = 61
+KeyBox.TextWrapped = true
+
+UITextSizeConstraint_2.Parent = KeyBox
+UITextSizeConstraint_2.MaxTextSize = 61
+
+UICorner_3.Parent = KeyBox
+
+Description.Name = "Description"
+Description.Parent = Frame
+Description.BackgroundColor3 = Color3.new(1, 1, 1)
+Description.BackgroundTransparency = 2
+Description.BorderColor3 = Color3.new(0, 0, 0)
+Description.BorderSizePixel = 0
+Description.Position = UDim2.new(0.118353345, 0, 0.0699362755, 0)
+Description.Size = UDim2.new(0.763293326, 0, 0.299363047, 0)
+Description.ZIndex = 999999999
+Description.Font = Enum.Font.FredokaOne
+Description.Text = "If you have a key, please insert it in the textbox below, otherwise press \"Get Key\" to obtain your key."
+Description.TextColor3 = Color3.new(1, 1, 1)
+Description.TextScaled = true
+Description.TextSize = 14
+Description.TextWrapped = true
+
+ConfirmKey.Name = "ConfirmKey"
+ConfirmKey.Parent = Frame
+ConfirmKey.BackgroundColor3 = Color3.new(0.384314, 1, 0.796079)
+ConfirmKey.BorderColor3 = Color3.new(0, 0, 0)
+ConfirmKey.BorderSizePixel = 0
+ConfirmKey.Position = UDim2.new(0.581475139, 0, 0.681528687, 0)
+ConfirmKey.Size = UDim2.new(0.343053162, 0, 0.134839565, 0)
+ConfirmKey.ZIndex = 999999999
+ConfirmKey.Font = Enum.Font.FredokaOne
+ConfirmKey.Text = ""
+ConfirmKey.TextColor3 = Color3.new(1, 1, 1)
+ConfirmKey.TextScaled = true
+ConfirmKey.TextSize = 14
+ConfirmKey.TextWrapped = true
+
+UICorner_4.Parent = ConfirmKey
+
+TextLabel_2.Parent = ConfirmKey
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 2
+TextLabel_2.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(-0.0399999991, 0, 5.98383906e-07, 0)
+TextLabel_2.Size = UDim2.new(1.03999996, 0, 1.00000036, 0)
+TextLabel_2.ZIndex = 999999998
+TextLabel_2.Font = Enum.Font.FredokaOne
+TextLabel_2.Text = "Confirm Key"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextWrapped = true
+
+UITextSizeConstraint_3.Parent = TextLabel_2
+UITextSizeConstraint_3.MaxTextSize = 33
+
+BG_2.Name = "BG"
+BG_2.Parent = ConfirmKey
+BG_2.BackgroundColor3 = Color3.new(1, 1, 1)
+BG_2.BackgroundTransparency = 2
+BG_2.BorderColor3 = Color3.new(0, 0, 0)
+BG_2.BorderSizePixel = 0
+BG_2.Position = UDim2.new(-0.0985520929, 0, -0.173706055, 0)
+BG_2.Size = UDim2.new(1.13376868, 0, 1.40154874, 0)
+BG_2.ZIndex = 999999997
+BG_2.Image = "rbxassetid://14300623828"
+BG_2.ImageColor3 = Color3.new(0.945098, 0.345098, 1)
+
+Description_2.Name = "Description"
+Description_2.Parent = Frame
+Description_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Description_2.BackgroundTransparency = 2
+Description_2.BorderColor3 = Color3.new(0, 0, 0)
+Description_2.BorderSizePixel = 0
+Description_2.Position = UDim2.new(0.116638079, 0, 0.872483969, 0)
+Description_2.Size = UDim2.new(0.763293326, 0, 0.0987261161, 0)
+Description_2.ZIndex = 999999999
+Description_2.Font = Enum.Font.FredokaOne
+Description_2.Text = ""
+Description_2.TextColor3 = Color3.new(1, 0.839216, 0.0392157)
+Description_2.TextScaled = true
+Description_2.TextSize = 14
+Description_2.TextWrapped = true
+
+    local getKeyButton = GetKey
+
+    getKeyButton.MouseButton1Click:Connect(function()
+        setclipboard(PandaAuth:GetKey(ServiceID))
+
+        GetKey.TextLabel.Text = "Link copied"
+        wait(2)
+        GetKey.TextLabel.Text = "Get Key"
+    end)
+
+    local confirmKeyButton = ConfirmKey
+    confirmKeyButton.MouseButton1Click:Connect(function()
+        local enteredKey = KeyBox.Text 
+        writefile("TuffKey.txt",enteredKey)
+        if PandaAuth:ValidateKey(ServiceID, enteredKey) then
+            ScreenGui:Destroy()
+            wait(0.15)
+            if game.PlaceId == 15050509770 then
+                joinDiscord()
+            end
+        else
+            ConfirmKey.TextLabel.Text = "Wrong key"
+            wait(3)
+            ConfirmKey.TextLabel.Text = "Confirm Key"
+        end
+    end)
+end
+
+function joinDiscord()
+    function antiafk()
+        pcall(function()
+        local VirtualUser=game:service'VirtualUser'
+        game:service'Players'.LocalPlayer.Idled:connect(function()
+        VirtualUser:CaptureController()
+        VirtualUser:ClickButton2(Vector2.new())
+        end)
+        game.Players.LocalPlayer.PlayerScripts.AFK:Destroy()
+    end)
+    end
+    antiafk()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local Window = Fluent:CreateWindow({
+    Title = game:GetService('MarketplaceService'):GetProductInfo(game.PlaceId).Name,
+    SubTitle = "Thats tuff",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+})
+--create new tabs here
+local Tabs = {
+    Home = Window:AddTab({ Title = "Home", Icon = "home" }),
+    Farming = Window:AddTab({ Title = "Farming", Icon = "sword" }),
+    Hatching = Window:AddTab({ Title = "Eggs", Icon = "egg" }),
+    Machines = Window:AddTab({ Title = "Machines", Icon = "factory" }),
+    Teleport = Window:AddTab({ Title = "Teleport", Icon = "plane" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+}
+-- PLAYER INFO
+local PlayerBestWorld = getsenv(game.Players.LocalPlayer.PlayerScripts.WorldManager).getBestWorld()
+local PlayerPower = game.Players.LocalPlayer.Eco.power.Value
+-- Helpers
+local PetHelper = require(game.ReplicatedStorage.Config.PetHelper)
+local DumBells = require(game.ReplicatedStorage.Config.ToolHelper.ToolConfig)
+local WorldInfo = require(game.ReplicatedStorage.Config.WorldHelper.WorldConfig)
+local LuckHelper = require(game.ReplicatedStorage.Config.LuckHelper) -- useful functions for egg: getDisplayEggName(for UI) / getCostType() / getCostPrice(will use costType so it doesnt spam the remote)
+local LuckConfig = require(game.ReplicatedStorage.Config.LuckHelper.LuckConfig)
+-- GAME DATA
+local LoadDumbellData = game.ReplicatedStorage.Remote.Function.Tool["[C-S]GetAllData"] -- why is this saved on a damn remote???????? (find equipped )
+local InventoryData = game.ReplicatedStorage.Remote.Function.Pet["[C-S]GetAllPetData"] -- racepool = EQUIPPED / freepool = UNEQUIPED
+local RelicsData = game.ReplicatedStorage.Remote.Function.Ornaments["GetOrnamentsData"]
+-- saved info for ui
+local EggNames = {}
+local EggInfo = {}
+local Rarities = {}
+local RaritiesFolder = game.ReplicatedStorage.Assets.Pet.PetFrame:GetChildren()
+local oneFive = {1,2,3,4,5}
+
+-- Load eggs
+for i,v in pairs(LuckConfig) do
+    local doublefuckingcheck = {}
+    for a,aa in pairs(v.RewardInfo) do
+        local nofuckingdoubles = i .. LuckHelper.getCostType(i)
+        if not doublefuckingcheck[nofuckingdoubles] and LuckHelper.getCostType(i) ~= "Robux" then
+            table.insert(EggNames,LuckHelper.getDisplayEggName(i) .. " || "..string.match(aa.PetID,"%w+"))
+            table.insert(EggInfo, {CheckSelect = LuckHelper.getDisplayEggName(i) .. " || "..string.match(aa.PetID,"%w+"), EggID = i, World  = string.match(aa.PetID,"%w+"),NoDoul = aa.PetID})
+            doublefuckingcheck[nofuckingdoubles] = true
+        end
+    end
+end
+table.sort(EggNames, function(a, b)
+    local abc = string.match(a, "||%s*(.+)")
+    local def = string.match(b, "||%s*(.+)")
+    return abc < def
+end)
+-- Load Rarities
+for i,v in pairs(RaritiesFolder) do 
+    if not table.find(Rarities,v) then
+        table.insert(Rarities,tostring(v))
+    end
+end
+
+-- Saved Vars
+local EggSelected
+local Options = Fluent.Options
+do
+    -- Helpful  functions **to return** (probably useless and a mess)
+    function returnPetInfo()
+        local petis = {}
+        for i,v in pairs(InventoryData:InvokeServer()) do
+            for a,aa in pairs(v) do
+                if not table.find(petis,a) then
+                    table.insert(petis,{raritysearch = aa.id, petid = a})
+                end
+            end
+        end
+        return petis
+    end
+    function refreshBestDumbbell()
+        for i, v in pairs(DumBells) do
+            if v.World == tonumber(PlayerBestWorld) and v.Cost <= PlayerPower and v.CostType ~= "robux" then
+                if v.Cost > -1 then return i end
+            end
+        end
+    end
+    function currentEquippedDumbbell()
+        for i,v in pairs(LoadDumbellData:InvokeServer()) do
+            if i == "use" then return v end
+        end
+    end
+    --UI
+    --HOME UI
+    --discord buttons
+    Tabs.Home:AddButton({
+        Title = "Discord",
+        Description = "",
+        Callback = function()
+            Window:Dialog({
+                Title = "Join Discord",
+                Content = "Open discord app or copy discord link",
+                Buttons = {
+                    {
+                        Title = "Open Discord",
+                        Callback = function()
+                            local http = game:GetService('HttpService')
+                            local req = (syn and syn.request) or http_request
+                            if req then
+                            req({
+                            Url = 'http://127.0.0.1:6463/rpc?v=1',
+                            Method = 'POST',
+                            Headers = {
+                            ['Content-Type'] = 'application/json',
+                            Origin = 'https://discord.com'
+                            },
+                            Body = http:JSONEncode({
+                            cmd = 'INVITE_BROWSER',
+                            nonce = http:GenerateGUID(false),
+                            args = {code = 'zHGg9ky9DQ'} -- put your server's code here in between the single quotes, and that's literally all you need
+                            })
+                            })
+                            end
+                        end
+                    },
+                    {
+                        Title = "Copy Discord Link",
+                        Callback = function()
+                            setclipboard('https://discord.gg/zHGg9ky9DQ')
+                        end
+                    }
+                }
+            })
+        end
+    })
+    --Farm
+    local StartPushBest = Tabs.Farming:AddToggle("AutoPush", {Title = "Auto Push (Best World Unlocked)", Default = false })
+    StartPushBest:OnChanged(function()
+        while Options.AutoPush.Value and wait(.2) do
+            if game.Players.LocalPlayer.World.Value ~= PlayerBestWorld then -- teleport if youre on wrong world (game bugs if wrong world)
+                game:GetService("ReplicatedStorage").Remote.Event.World:FindFirstChild("[C-S]TryGoWorld"):FireServer(PlayerBestWorld)
+                wait(.3)
+            end
+            game:GetService("ReplicatedStorage").Remote.Event.Game:FindFirstChild("[C-S]PlayerTryBall"):FireServer(PlayerBestWorld)
+            wait(.1)
+            game:GetService("ReplicatedStorage").Remote.Event.Game:FindFirstChild("[C-S]PlayerEnd"):FireServer(false,0.99)
+        end
+    end)
+    local StartPushCurrentWorld = Tabs.Farming:AddToggle("AutoPushCurrent", {Title = "Auto Push (Current World)", Default = false })
+    StartPushCurrentWorld:OnChanged(function()
+        while Options.AutoPushCurrent.Value and wait(.2) do
+            game:GetService("ReplicatedStorage").Remote.Event.Game:FindFirstChild("[C-S]PlayerTryBall"):FireServer(game.Players.LocalPlayer.World.Value)
+            wait(.1)
+            game:GetService("ReplicatedStorage").Remote.Event.Game:FindFirstChild("[C-S]PlayerEnd"):FireServer(false,0.99)
+        end
+    end)
+    local StartTrainStrength = Tabs.Farming:AddToggle("AutoTrain", {Title = "Auto Train", Default = false })
+    StartTrainStrength:OnChanged(function()
+        while Options.AutoTrain.Value and wait(.2) do
+            if currentEquippedDumbbell() ~= refreshBestDumbbell() then
+                game:GetService("ReplicatedStorage").Remote.Event.Tool:FindFirstChild("[C-S]TryBuyAndUseTool"):FireServer(refreshBestDumbbell())
+            end
+            game:GetService("ReplicatedStorage").Remote.Event.Game:FindFirstChild("[C-S]PlayerClick"):FireServer(game:GetService("Players").LocalPlayer.Character:FindFirstChild(currentEquippedDumbbell()))
+            wait(.1)
+        end
+    end)
+    Tabs.Farming:AddParagraph({
+        Title = "Rebirthing",
+        Content = ""
+    })
+    local StartNormalRebirth = Tabs.Farming:AddToggle("AutoRebirth", {Title = "Auto Rebirth", Default = false })
+    StartNormalRebirth:OnChanged(function()
+        while Options.AutoRebirth.Value and wait(.1) do
+            local RebirthGui = game.Players.LocalPlayer.PlayerGui.Main.Rebirth.Bar.Val.Text
+            local AbbreviateNum = require(game.ReplicatedStorage.Utils.AbbNumber)
+            if game.Players.LocalPlayer.Eco.win.Value >= tonumber(AbbreviateNum.ConvertToNumber(string.match(RebirthGui,"/(%w+)"))) then
+                game:GetService("ReplicatedStorage").Remote.Event.Eco:FindFirstChild("[C-S]PlayerTryRebirth"):FireServer()
+            end
+        end
+    end)
+    local StartSuperRebirth = Tabs.Farming:AddToggle("AutoSuperRebirth", {Title = "Auto Super Rebirth", Default = false })
+    StartSuperRebirth:OnChanged(function()
+        while Options.AutoSuperRebirth.Value and wait(.2) do
+            if game.Players.LocalPlayer.Eco.rebirth.Value >= 35 then
+                game:GetService("ReplicatedStorage").Remote.Event.Eco:FindFirstChild("[C-S]PlayerTrySuperRebirth"):FireServer()
+            end
+        end
+    end)
+    --Hatching
+    local DropdownSelectEgg = Tabs.Hatching:AddDropdown("SelectedEgg", {
+        Title = "Select Egg To Hatch",
+        Values = EggNames,
+        Multi = false,
+        Default = "Select",
+    })
+    DropdownSelectEgg:OnChanged(function(Value)
+        for i,v in pairs(EggInfo) do
+            if Value == v.CheckSelect then
+                EggSelected = v.EggID
+            end
+        end
+    end)
+    local StartAutoHatch = Tabs.Hatching:AddToggle("AutoHatch", {Title = "Auto Hatch", Default = false })
+    StartAutoHatch:OnChanged(function()
+        while Options.AutoHatch.Value and wait(.4) do
+            game:GetService("ReplicatedStorage").Remote.Function.Luck:FindFirstChild("[C-S]DoLuck"):InvokeServer(EggSelected,6)
+        end
+    end)
+    local RaritiesToDelete = {}
+    local MultiDropdownDeleteRarities = Tabs.Hatching:AddDropdown("SelectedDeletedRarities", {
+        Title = "Select Rarities To Delete",
+        Description = "",
+        Values = Rarities,
+        Multi = true,
+        Default = {},
+    })
+
+    MultiDropdownDeleteRarities:OnChanged(function(Value)
+        RaritiesToDelete = {}
+        for Value, State in next, Value do
+            if not table.find(RaritiesToDelete,Value) then
+                table.insert(RaritiesToDelete, Value)
+            end
+        end
+    end)
+    local StartDeleting = Tabs.Hatching:AddToggle("AutoDelete", {Title = "Auto Delete", Default = false })
+    StartDeleting:OnChanged(function()
+        while Options.AutoDelete.Value and wait(.2) do
+            local args = {}
+            for i,v in pairs(returnPetInfo()) do
+                if table.find(RaritiesToDelete,PetHelper.getPetRarity(v.raritysearch)) then
+                    args[v.petid] = true
+                end
+            end
+            game:GetService("ReplicatedStorage").Remote.Event.Pet:FindFirstChild("[S-C]DeletePets"):FireServer(args)
+        end
+    end)
+    -- Machines
+    local PetGoldAmount
+    local DropdownGoldAmount = Tabs.Machines:AddDropdown("SelectedGoldAmount", {
+        Title = "Select Pet Amount For Gold",
+        Values = oneFive,
+        Multi = false,
+        Default = "Select",
+    })
+    DropdownGoldAmount:OnChanged(function(Value)
+        PetGoldAmount = Value
+    end)
+    local StartAutoGold = Tabs.Machines:AddToggle("AutoGold", {Title = "Auto Gold", Default = false })
+    StartAutoGold:OnChanged(function()
+        while Options.AutoGold.Value and wait(.2) do
+            local amountyeah = PetGoldAmount
+            local invData = InventoryData:InvokeServer()
+            local petInfoTBL = {}
+            for i, v in pairs(invData.freepool) do
+                if v.super == nil then
+                    local petName = PetHelper.getPetDisPlayName(v.id) .. v.star
+                    petInfoTBL[petName] = petInfoTBL[petName] or {}
+                    table.insert(petInfoTBL[petName], i)
+        
+                    if #petInfoTBL[petName] == amountyeah then
+                        local args = {}
+                        for a, aa in ipairs(petInfoTBL[petName]) do
+                            args[aa] = true
+                            amountyeah = amountyeah - 1
+                            if amountyeah == 0 then break end
+                        end
+                        game:GetService("ReplicatedStorage").Remote.Function.Pet:FindFirstChild("[C-S]TryMerge"):InvokeServer(args)
+                    end
+                end
+            end
+        end
+    end)
+    local StartAutoRainbow = Tabs.Machines:AddToggle("AutoRainbow", {Title = "Auto Rainbow", Default = false })
+    StartAutoRainbow:OnChanged(function()
+        while Options.AutoRainbow.Value and wait(.3) do
+            local invData = InventoryData:InvokeServer()
+            local RainbowData = game.ReplicatedStorage.Remote.Function.Rainbow["[S-C]GetRainbowData"]:InvokeServer()
+            for i,v in pairs(RainbowData) do
+                if v.rainbowtime - os.time() <= 0 then
+                    game:GetService("ReplicatedStorage").Remote.Event.Rainbow:FindFirstChild("[C-S]TryClaim"):FireServer(i)
+                end
+            end
+            for i, v in pairs(invData.freepool) do
+                if v.super == 1 then
+                    local args = {[1] = i}
+                    game:GetService("ReplicatedStorage").Remote.Event.Rainbow:FindFirstChild("[C-S]TryLetProgress"):FireServer(unpack(args))
+                end
+            end
+        end
+    end)
+    local StartCrafting = Tabs.Machines:AddToggle("AutoCraft", {Title = "Auto Craft", Default = false })
+    StartCrafting:OnChanged(function()
+        while Options.AutoCraft.Value and wait(.2) do
+            local amountPets = {}
+            local invDataTwo = InventoryData:InvokeServer()
+            for i, v in pairs(invDataTwo.freepool) do
+                if v.star ~= 3 then
+                    local petDisplayName = PetHelper.getPetDisPlayName(v.id) .. v.star
+                    if v.super then 
+                        petDisplayName = petDisplayName .. v.super 
+                    else 
+                        petDisplayName = petDisplayName .. "noSuper" 
+                    end
+                    amountPets[petDisplayName] = (amountPets[petDisplayName] or 0) + 1
+                    if amountPets[petDisplayName] == 3 then
+                        game:GetService("ReplicatedStorage").Remote.Event.Pet:FindFirstChild("[S-C]CraftPets"):FireServer(i) -- (v.super = {nil = Normal, 1 = Gold,2 = Rainbow}, || v.star = {0 = Baby, 1 = Big, 2 = Huge, 3 = Titanic})
+                    end
+                end
+            end
+        end
+    end)
+    local StartMerging = Tabs.Machines:AddToggle("AutoMerge", {Title = "Auto Merge Relics", Default = false })
+    StartMerging:OnChanged(function()
+        while Options.AutoMerge.Value and wait(.2) do
+            local RelicsData = game.ReplicatedStorage.Remote.Function.Ornaments["GetOrnamentsData"]:InvokeServer()
+            local args = {}
+            for i,v in pairs(RelicsData.freepool) do
+                if v.Amount >= 3 then
+                    args = {[1] = {v.GUID}}
+                    break
+                end
+            end
+            game:GetService("ReplicatedStorage").Remote.Event.Ornaments.PlayerTryMerge:FireServer(unpack(args))
+        end
+    end)
+
+    -- Teleport
+    local WorldInfo = require(game.ReplicatedStorage.Config.WorldHelper.WorldConfig)
+    local TeleportTbl = {}
+    for i,v in pairs(WorldInfo) do
+        table.insert(TeleportTbl,{WorldName = string.match(v.Team,"[%w%s]+"),WorldID = i})
+    end
+    for i,v in pairs(TeleportTbl) do
+        local removeEmoji = v.WorldName:match("[%w%s]+")
+        if removeEmoji and removeEmoji:sub(1, 1) == " " then removeEmoji = removeEmoji:sub(2) end
+        Tabs.Teleport:AddButton({
+            Title = "Teleport To: "..removeEmoji,
+            Description = "",
+            Callback = function()
+                game:GetService("ReplicatedStorage").Remote.Event.World:FindFirstChild("[C-S]TryGoWorld"):FireServer(v.WorldID) 
+            end
+        })
+    end
+end
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+-- Ignore keys that are used by ThemeManager.
+-- (we dont want configs to save themes, do we?)
+SaveManager:IgnoreThemeSettings()
+
+-- You can add indexes of elements the save manager should ignore
+SaveManager:SetIgnoreIndexes({})
+
+-- use case for doing it this way:
+-- a script hub could have themes in a global folder
+-- and game configs in a separate folder per game
+InterfaceManager:SetFolder("ThatsTuff")
+SaveManager:SetFolder("ThatsTuff/AnimeChampionsTuff")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+
+Window:SelectTab(1)
+
+Fluent:Notify({
+    Title = "Fluent",
+    Content = "The script has been loaded.",
+    Duration = 2.5
+})
+
+-- You can use the SaveManager:LoadAutoloadConfig() to load a config
+-- which has been marked to be one that auto loads!
+SaveManager:LoadAutoloadConfig()
+end
+if PandaAuth:ValidateKey(ServiceID, readfile("TuffKey.txt")) then
+    if game.PlaceId == 15050509770 then
+        joinDiscord()
+    end
+else
+    createGui(playerGui)
+end
