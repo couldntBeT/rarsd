@@ -1,4 +1,9 @@
-
+if debug.info(1, "l") ~= 1 then
+    game.Players.LocalPlayer:Kick("Safe dude..")
+        while true do end
+else
+    ---handle----
+end
 
 
 pcall(game.HttpGet, game, setmetatable({}, {
